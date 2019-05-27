@@ -42,13 +42,13 @@ describe "Pokemon" do
 
 #comment out  describe "BONUS" do
 
-    before do
-      @sql_runner.execute_create_hp_column
-      Pokemon.save('Pikachu', 'electric', @db)
-      Pokemon.save('Magikarp', 'water', @db)
-    end
+#comment out    before do
+#comment out      @sql_runner.execute_create_hp_column
+#comment out      Pokemon.save('Pikachu', 'electric', @db)
+#comment out      Pokemon.save('Magikarp', 'water', @db)
+ #comment out   end
 
-    let(:pikachu){Pokemon.find(1, @db)}
+#comment out    let(:pikachu){Pokemon.find(1, @db)}
     let(:magikarp){Pokemon.find(2, @db)}
 
     # remove the 'x' before 'it' to run these tests
