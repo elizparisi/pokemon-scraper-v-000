@@ -42,21 +42,21 @@ describe "Pokemon" do
     
     describe "BONUS" do
 
-#comment out    before do
-#comment out      @sql_runner.execute_create_hp_column
-#comment out      Pokemon.save('Pikachu', 'electric', @db)
-#comment out      Pokemon.save('Magikarp', 'water', @db)
- #comment out   end
+    before do
+      @sql_runner.execute_create_hp_column
+      Pokemon.save('Pikachu', 'electric', @db)
+      Pokemon.save('Magikarp', 'water', @db)
+   end
 
-#comment out    let(:pikachu){Pokemon.find(1, @db)}
-#comment out    let(:magikarp){Pokemon.find(2, @db)}
+    let(:pikachu){Pokemon.find(1, @db)}
+    let(:magikarp){Pokemon.find(2, @db)}
 
     # remove the 'x' before 'it' to run these tests
- #comment out   xit "knows that a pokemon have a default hp of 60" do
+    xit "knows that a pokemon have a default hp of 60" do
       # The find method should create a new Pokemon object with an id, type, name AND hp after selecting their row from the database by their id number.
       # remember to also update the initialize method to accept an argument of hp that defaults to nil if not set (so it still passes the non-bonus tests)
-#comment out      expect(@db.execute("SELECT hp FROM pokemon").flatten.first).to eq(60)
-#comment out    end
+      expect(@db.execute("SELECT hp FROM pokemon").flatten.first).to eq(60)
+    end
 
     # So Ian and you have decided to battle.  He chose Magikarp (rookie mistake), and you chose Pikachu.
     # He used splash. It wasn't very effective. It did one damage.
