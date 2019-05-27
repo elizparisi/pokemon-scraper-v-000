@@ -39,8 +39,8 @@ describe "Pokemon" do
       expect(pikachu_from_db.type).to eq("electric")
     end
   end
-end
-#comment out  describe "BONUS" do
+    
+    describe "BONUS" do
 
 #comment out    before do
 #comment out      @sql_runner.execute_create_hp_column
@@ -71,4 +71,4 @@ end
       expect(Pokemon.find(2, @db).hp).to eq(0)
 #comment out    end
 #comment out  end
-#comment out end
+end
